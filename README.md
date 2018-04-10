@@ -1,3 +1,3 @@
-#Archivo de configuracion basico
+# Archivo de configuracion basico
 
-##Se le puede dar formato con Markdown!!
+## Se le puede dar **formato** con Markdown!!
