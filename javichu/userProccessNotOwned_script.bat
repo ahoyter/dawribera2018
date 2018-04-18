@@ -6,5 +6,3 @@ echo ^</pre^>^</body^>^</html^> >> userProccessNotOwned.html
 cls
 call rake
 pause
-
-ver los procesos que no sean del usuario
