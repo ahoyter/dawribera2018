@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 menuSel=1
 discard=0
 
