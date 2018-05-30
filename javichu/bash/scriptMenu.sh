@@ -4,8 +4,7 @@
 ################
 
 archivo="listado.html"
-respuesta=0
-menuSel=1
+respuesta=1
 
 function menuFunc() {
 	clear
@@ -16,7 +15,7 @@ function menuFunc() {
 	echo "4- pkts instalados";
 	echo "0- salir";
 	echo "seleccione una opcion:";
-	read $menuSel
+	read $respuesta
 }
 
 function displayFunc() {
@@ -42,9 +41,7 @@ function createFunc() {
 	echo "</head>" >> $archivo
 	echo "<body>" >> $archivo
 	echo "<pre>" >> $archivo
-
 	displayFunc $1
-
 	echo "</pre>" >> $archivo
 	echo "</body>" >> $archivo
 	echo "</html>" >> $archivo
@@ -56,9 +53,9 @@ function comprobar() {
 
 while true; do #ENTRY POINT
 	menuFunc
-	if [ $menuSel -eq 5|6|7|8|9 ]; then
+	if [ $respuesta -eq 5|6|7|8|9 ]; then
 		continue
-	elif [ $menuSel -eq 0 ]; then
+	elif [ $respuesta -eq 0 ]; then
 		break
 	else
 		displayFunc $menuSel
