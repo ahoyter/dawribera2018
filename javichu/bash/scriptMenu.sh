@@ -56,7 +56,6 @@ comprobarFunc() {
 }
 
 aboutFunc() {
-	clear
 	printf "este programa ha sido creado por OOQQ - 31/05/2018
 presione ENTER para continuar..."
 	read respuesta
