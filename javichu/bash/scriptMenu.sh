@@ -9,15 +9,16 @@ respuesta="s"
 
 menuFunc() {
 	clear
-	echo "::mostrar listados::";
-	echo "1- usuarios";
-	echo "2- grupos";
-	echo "3- procesos";
-	echo "4- pkts instalados";
-	echo "0- salir";
-	echo "";
-	echo "seleccione una opcion:";
-	read seleccion
+	printf "..::mostrar listados::..
+-1- usuarios
+-2- grupos
+-3- procesos
+-4- pkts instalados
+-9- acerca de...
+-0- salir
+
+seleccione una opcion:\n"
+read seleccion
 }
 
 displayFunc() {
@@ -54,23 +55,31 @@ comprobarFunc() {
 	cat $archivo
 }
 
+aboutFunc() {
+	clear
+	printf "este programa ha sido creado por OOQQ - 31/05/2018
+presione ENTER para continuar..."
+	read respuesta
+}
+
 while true; do #ENTRY POINT
 	menuFunc
-	if [ $seleccion -gt 4 ] && [ $seleccion -lt 10 ]; then
+	if [ $seleccion -gt 4 ] && [ $seleccion -lt 9 ]; then
+		continue
+	elif [ $seleccion -eq 9 ]; then
+		aboutFunc
 		continue
 	elif [ $seleccion -eq 0 ]; then
 		break
 	else
 		displayFunc $seleccion
 
-		echo "";
-		echo "desea guardar el archivo? s/n";
+		printf "\ndesea guardar el archivo? (s/n)"
 		read respuesta
 		if [ "$respuesta" == "s" ]; then
 			createFunc $seleccion
 			if [ "$respuesta" == "s" ]; then
-				echo "";
-				echo "desea comprobar el archivo? s/n";
+				printf "\ndesea comprobar el archivo? (s/n)"
 				read respuesta
 				if [ "$respuesta" == "s" ]; then
 					comprobarFunc
@@ -84,8 +93,7 @@ while true; do #ENTRY POINT
 			continue
 		fi
 
-		echo "";
-		echo "presione una tecla para continuar...";
+		printf "\npresione ENTER para continuar..."
 		read respuesta
 	fi
 done
