@@ -69,16 +69,17 @@ while true; do #ENTRY POINT
 		aboutFunc
 		continue
 	elif [ $seleccion -eq 0 ]; then
+		printf "\nbye\n"
 		break
 	else
 		displayFunc $seleccion
 
-		printf "\ndesea guardar el archivo? (s/n)"
+		printf "\ndesea guardar el archivo? (s/n)\n"
 		read respuesta
 		if [ "$respuesta" == "s" ]; then
 			createFunc $seleccion
 			if [ "$respuesta" == "s" ]; then
-				printf "\ndesea comprobar el archivo? (s/n)"
+				printf "\ndesea comprobar el archivo? (s/n)\n"
 				read respuesta
 				if [ "$respuesta" == "s" ]; then
 					comprobarFunc
@@ -92,7 +93,7 @@ while true; do #ENTRY POINT
 			continue
 		fi
 
-		printf "\npresione ENTER para continuar..."
+		printf "\npresione ENTER para continuar...\n"
 		read respuesta
 	fi
 done
