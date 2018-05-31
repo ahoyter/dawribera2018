@@ -52,9 +52,6 @@ createFunc() {
 
 comprobarFunc() {
 	cat $archivo
-	echo "";
-	echo "presione una tecla para continuar...";
-	read respuesta
 }
 
 while true; do #ENTRY POINT
