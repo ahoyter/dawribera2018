@@ -58,7 +58,7 @@ do {
 
 	switch($opcionElegida) {
 	1 {
-	$opcionListaElegida | ConvertTo-Html -title "Lista" -CssUri ".\style.css" -pre "<h1>Lista</h1>" -post "<footer><small>generado el dia 27 de Abril de 2018</small></footer>" >> lista.html
+	$opcionListaElegida | ConvertTo-Html -title "Lista" -CssUri ".\css\style.css" -pre "<h1>Lista</h1>" -post "<footer><small>generado el dia 27 de Abril de 2018</small></footer>" >> lista.html
 	Get-Content .\lista.html
 	}
 
