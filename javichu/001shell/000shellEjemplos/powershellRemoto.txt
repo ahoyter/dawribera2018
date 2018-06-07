@@ -1,0 +1,30 @@
+Practica administracion remota con powershell
+Visualizar los dos PSRemoting
+Get-Help PSRemoting
+	Enable-PSRemoting
+	Disable-PSRemoting
+
+Pide ayuda de Enable-PsRemoting
+	Get-Help Enable-PSRemoting
+
+Pedir ayuda de winrm
+	winrm help
+
+Pedir ayuda de winrm s -? (modifica la configuracion)
+	winrm help s -?
+
+Pedir ayuda de winrm input
+	winrm help input
+
+Pedir ayuda de about_remote
+	Get-Help about-Remote
+
+Visualizar por pantalla todos los procesos de un determinado host remoto del aula
+
+Enable-PSRemoting -force #habilita el acceso remoto #fuerza aceptar la conexion sin preguntar
+winrm s winrm/config/client '@{TrustedHosts="PC5046"}' #nos conectamos a este cliente, (tiene que tener el Enable-PSRemoting activado, y nos pedira la cuenta de usuario y la contraseña para poder entrar)
+Invoke-Command {get-service} -computername Pc5048 -credential #invokamos get-service en el ordenador 'victima' x_D
+
+EXTRA
+Get-Item WSMan:\localhost\Client\TrustedHosts #lista de clientes 'victima' a los que podemos acceder
+Set-Item WSMan:\localhost\Client\TrustedHosts -Value "" #limpiamos la lista de clientes 'victima'

@@ -1,0 +1,5 @@
+tar czf home.tgz /var/www/html
+(tape archiver) (Create Zip File) called (home.tgz) from (/var/www/html)
+
+tar -xvf home.tgz
+(tape archiver) (-eXtract & View File process) (home.tgz) on the current directory

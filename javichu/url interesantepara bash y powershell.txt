@@ -1,0 +1,5 @@
+Comandos y ayuda bash
+https://ss64.com/bash/
+
+Comandos y ayuda powershell
+https://ss64.com/ps/

@@ -1,0 +1,33 @@
+power shell////////////////////////
+///////////////////////////////////
+power shell es el bash de windows
+Update-Help -> se descarga las actualizaciones de las ayudas (importante)
+
+comandos de power shell////////////
+///////////////////////////////////
+eq -> equal to
+gt -> greater than
+lt -> less than
+
+SERVER
+PROCESS
+LOCAL USER
+LOCAL ROOT
+
+ayuda//////////////////////////////
+///////////////////////////////////
+get-help
+get-help where-object -> filtra
+get-help convertto -> yields la salida a un archivo html, css, etc
+get-help format -> formatea la salida
+
+get-help where-object -example -> da un ejemplo de como usar el comando
+
+get-help about -> archivos about tienen descripciones de ayudas de todo
+
+comandos///////////////////////////
+///////////////////////////////////
+Get-Service | Where-Object 
+
+Get-Service A* | ConvertTo-Html -Title "Windows Services" >> convertido.html
+-> visualizame todos los servicios que empiezan por A, conviertelo a Html y añade el titulo "Windows Services", sacalo a un archivo .html que estara en el directorio donde este el prompt
